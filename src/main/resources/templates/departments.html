@@ -6,10 +6,10 @@
 </head>
 <body>
 	<div class="container">
-		<h1>University Departments</h1>
+		<h1 class="text-center mt-5">University Departments</h1 >
 		
 		<!-- tabella departments -->
-		<table class="table">
+		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th scope="col">Name</th>
@@ -22,12 +22,12 @@
 			</thead>
 			<tbody>
 				<tr th:each="item : ${departments}">
-					<td th:text="${item.name}"></td>
-					<td th:text="${item.address}"></td>
-					<td th:text="${item.phone}"></td>
-					<td th:text="${item.email}"></td>
-					<td th:text="${item.website}"></td>
-					<td th:text="${item.headOfDepartment}"></td>
+					<td th:text="${item.name}" class="table-primary"></td>
+					<td th:text="${item.address}" class="table-warning"></td>
+					<td th:text="${item.phone}" class="table-success text-weight-bold"></td>
+					<td th:text="${item.email}" class="table-secondary"></td>
+					<td th:text="${item.website}" class="table-info"></td>
+					<td th:text="${item.headOfDepartment}" class="table-danger"></td>
 				</tr>
 			</tbody>
 		</table>
