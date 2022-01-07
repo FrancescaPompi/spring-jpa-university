@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -22,9 +21,6 @@ public class Degree {
 	private String email;
 	private String website;
 	
-
-	@JoinColumn(name="department_id")
-	private Integer departmentId;
 
 	public Integer getId() {
 		return id;
@@ -74,13 +70,4 @@ public class Degree {
 		this.website = website;
 	}
 
-	public Integer getDepartmentId() {
-		return departmentId;
-	}
-
-	public void setDepartmentId(Integer departmentId) {
-		this.departmentId = departmentId;
-	}
-	
-	
 }

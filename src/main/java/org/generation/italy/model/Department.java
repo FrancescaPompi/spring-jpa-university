@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -28,7 +29,8 @@ public class Department {
 	@Column(name="head_of_department")
 	private String headOfDepartment;
 	
-	@OneToMany(mappedBy = "departmentId")
+	@OneToMany
+	@JoinColumn(name="department_id")
 	private List<Degree> degrees;
 	
 	// getters e setters
