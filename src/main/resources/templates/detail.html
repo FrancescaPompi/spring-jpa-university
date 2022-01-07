@@ -5,18 +5,34 @@
 		<title>Degrees</title>
 	</head>
 	<body>
-    <div class="container">
-        <h1 th:text="${department.name}"></h1>
-        <hr/>
-		
-		<ul>
-			<li th:each="item : ${degrees}" th:text="${item.name}"></li >
-		</ul>
-        
-        <div>
-			<a class="btn btn-success" th:href="@{/}">Homepage</a>
-		</div>
-    </div>
-    <div th:replace="fragments :: scripts"></div>
-</body>
+	    <div class="container">
+	        <h1 th:text="${department.name}"></h1>
+	        <hr/>
+			
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Level</th>
+						<th scope="col">Address</th>
+						<th scope="col">Email</th>
+						<th scope="col">Website</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="item : ${degrees}">
+						<td th:text="${item.name}" class="table-primary"></td>
+						<td th:text="${item.level}" class="table-warning"></td>
+						<td th:text="${item.address}" class="table-success"></td>
+						<td th:text="${item.email}" class="table-secondary"></td>
+						<td th:text="${item.website}" class="table-info"></td>
+					</tr>
+				</tbody>
+			</table>	        
+	        <div>
+				<a class="btn btn-success" th:href="@{/}">Homepage</a>
+			</div>
+	    </div>
+	    <div th:replace="fragments :: scripts"></div>
+	</body>
 </html>
