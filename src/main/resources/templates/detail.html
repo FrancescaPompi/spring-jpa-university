@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<div th:replace="fragments :: head"></div>
+		<title>Degrees</title>
+	</head>
+	<body>
+    <div class="container">
+        <h1 th:text="${department.name}"></h1>
+        <hr/>
+		
+		<ul>
+			<li th:each="item : ${degrees}" th:text="${item.name}"></li >
+		</ul>
+        
+        <div>
+			<a class="btn btn-success" th:href="@{/}">Homepage</a>
+		</div>
+    </div>
+    <div th:replace="fragments :: scripts"></div>
+</body>
+</html>

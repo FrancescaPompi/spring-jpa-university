@@ -2,12 +2,10 @@ package org.generation.italy.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,9 +22,9 @@ public class Degree {
 	private String email;
 	private String website;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+
 	@JoinColumn(name="department_id")
-	private Department department;
+	private Integer departmentId;
 
 	public Integer getId() {
 		return id;
@@ -76,12 +74,12 @@ public class Degree {
 		this.website = website;
 	}
 
-	public Department getDepartment() {
-		return department;
+	public Integer getDepartmentId() {
+		return departmentId;
 	}
 
-	public void setDepartment(Department department) {
-		this.department = department;
+	public void setDepartmentId(Integer departmentId) {
+		this.departmentId = departmentId;
 	}
 	
 	
