@@ -5,7 +5,7 @@
 		<title>Degrees</title>
 	</head>
 	<body>
-	    <div class="container">
+	    <div class="container pt-4">
 	        <h1 th:text="${department.name}"></h1>
 	        <hr/>
 			
@@ -29,9 +29,9 @@
 					</tr>
 				</tbody>
 			</table>	        
-	        <div>
+	        <div class="pt-3">
 				<a class="btn btn-success" th:href="@{/}">Homepage</a>
-			</div>
+			</div >
 	    </div>
 	    <div th:replace="fragments :: scripts"></div>
 	</body>

@@ -28,6 +28,8 @@
 					<td th:text="${item.email}" class="table-secondary"></td>
 					<td th:text="${item.website}" class="table-info"></td>
 					<td th:text="${item.headOfDepartment}" class="table-danger"></td>
+					<td><a class="btn btn-success" th:href="@{|/department/${item.id}|}">Details</a></td>
+
 				</tr>
 			</tbody>
 		</table>
